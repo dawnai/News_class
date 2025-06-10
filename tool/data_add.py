@@ -8,8 +8,8 @@ openai.api_key = "sk-6CmV9qfScsx16xG8ZgqrinQLpCUGeDrqD77P9H53pZ9klwLU"
 openai.api_base = "https://llm.jnu.cn/v1"
 
 # 文件路径
-input_file = 'news_category_8.txt'
-output_file = 'news_8_cha.txt'
+input_file = 'news_category_10.txt'
+output_file = 'news_10_Jap.txt'
 
 # 最大并行请求数（根据API限制调整）
 MAX_WORKERS = 3  # 建议设置为3-10之间，具体取决于API的速率限制
@@ -19,7 +19,7 @@ def translate_text(text):
         response = openai.ChatCompletion.create(
             model="Qwen2.5-72B-Instruct",
             messages=[
-                {"role": "system", "content": "你是一个专业的新闻翻译员，请将以下英文新闻标题准确翻译成中文，保持标题的简洁性和新闻性，不要添加任何额外解释，如果新闻本就是中文，请直接返回原始文本，不要做任何解释。"},
+                {"role": "system", "content": "你是一个专业的新闻翻译员，请将以下英文新闻标题准确翻译成日文，保持标题的简洁性和新闻性，不要添加任何额外解释，如果新闻本就是日文，请直接返回原始文本，不要做任何解释。"},
                 {"role": "user", "content": text}
             ],
             temperature=0.3

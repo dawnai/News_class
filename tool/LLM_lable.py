@@ -59,7 +59,7 @@ def classify_news_content(content: str, title: str, description: str) -> str:
     
     新闻标题：{title}
     新闻描述：{description}
-    新闻内容（摘要）：{content[:200]}...  # 只发送前500字符以避免过长
+    新闻内容（摘要）：{content[:200]}...  # 只发送前200字符以避免过长
     
     请只返回最匹配的分类标签，不要包含其他任何文字。
     """
@@ -140,7 +140,7 @@ def process_json_file(input_path: str, output_path: str, max_items: Optional[int
     print(f"处理完成！结果已保存到 {output_path}")
 
 if __name__ == "__main__":
-    input_file = "./data/paywall_news.json"
+    input_file = "../data/paywall_news_2.json"
     output_file = "output_with_categories.json"
     
     # 设置线程数 (建议不超过RATE_LIMIT值)

@@ -23,7 +23,7 @@ reverse_map = {v: k for k, v in category_map.items()}
 category_counts = {k: 0 for k in category_map.keys()}
 
 # 读取文件并统计
-with open('./output.txt', 'r', encoding='utf-8') as f:
+with open('./output_all.txt', 'r', encoding='utf-8') as f:
     for line in f:
         # 假设每行格式是"标题 数字"
         parts = line.strip().split()

@@ -43,8 +43,8 @@ def save_to_txt(data, output_file):
 
 # 主流程
 if __name__ == "__main__":
-    input_json = "../data/news.json"  # 替换为你的JSON文件路径
-    output_txt = "output.txt"  # 输出文件路径
+    input_json = "../data/news_2.json"  # 替换为你的JSON文件路径
+    output_txt = "output_2.txt"  # 输出文件路径
     
     # 执行步骤
     json_data = load_json(input_json)

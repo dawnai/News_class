@@ -32,7 +32,7 @@ def check_txt_format(file_path):
 
 # 使用示例
 if __name__ == "__main__":
-    file_path = "news_category_8.txt"  # 替换为你的文件路径
+    file_path = "news_9_Cha_LLM.txt"  # 替换为你的文件路径
     is_correct, incorrect_lines = check_txt_format(file_path)
     
     if is_correct:
